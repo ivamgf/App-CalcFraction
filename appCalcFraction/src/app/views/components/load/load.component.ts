@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-load',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./load.component.scss']
 })
 export class LoadComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.navHome();
   }
+  // Function redirect home
+  navHome() {
+    setTimeout(() => {
+      this.router.navigate(['home']);
+    }, 3000);
+  }
+  // Function redirect home
 
 }
