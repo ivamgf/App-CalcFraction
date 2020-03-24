@@ -37,20 +37,20 @@ const routes: Routes = [
       component: TermsComponent
   },
   {
+      path: 'fraction',
+      component: FractionComponent
+  },
+  {
+      path: 'theory',
+      component: TheoryComponent
+  },
+  {
       path: 'page404',
       component: Page404Component
   },
   {
-    path: '**',
-    component: Page404Component
-  },
-  {
-    path: 'fraction',
-    component: FractionComponent
-  },
-  {
-    path: 'theory',
-    component: TheoryComponent
+      path: '**',
+      component: Page404Component
   }
 ];
 
