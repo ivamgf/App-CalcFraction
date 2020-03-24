@@ -1,0 +1,30 @@
+  section {
+    background-color: white;
+    height: 550px;    
+  }
+  .style-home {
+        width: 30%;
+  }
+  .style-logo {
+    width: 90%;
+    margin-top: 25%; 
+}
+  @media only screen and (min-width: 557px) and (max-width: 992px){
+    .style-home {
+     width: 25%;
+    }
+    .style-logo {
+        width: 90%;
+        margin-top: 25%; 
+    }
+}
+@media only screen and (max-width: 557px){
+    .style-home {
+        width: 40%;
+        }
+    .style-logo {
+        width: 90%;
+        margin-right: 15%;
+        margin-top: 25%; 
+    }
+}
