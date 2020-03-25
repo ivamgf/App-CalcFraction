@@ -9,9 +9,14 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "styles": [
+    "node_modules/primeicons/primeicons.css",
+    "node_modules/primeng/resources/themes/nova-light/theme.css",
+    "node_modules/primeng/resources/primeng.min.css"
+  ],
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.0.6",
+    "@angular/animations": "^9.0.7",
     "@angular/common": "~9.0.6",
     "@angular/compiler": "~9.0.6",
     "@angular/core": "~9.0.6",
@@ -19,6 +24,9 @@
     "@angular/platform-browser": "~9.0.6",
     "@angular/platform-browser-dynamic": "~9.0.6",
     "@angular/router": "~9.0.6",
+    "chart.js": "^2.9.3",
+    "primeicons": "^2.0.0",
+    "primeng": "^9.0.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
