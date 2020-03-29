@@ -1,0 +1,89 @@
+section {
+    background-color: white;
+    // height: 500px;    
+  }
+  .style-terms {
+        width: 90%;
+  }
+  .style-subtitle {
+    margin-top: 15%;
+    text-align: center;
+    color: orangered;
+    font-weight: bold;
+  }
+  .style-card {
+    width: 60%;
+    margin-left: 0%;
+    margin-top: 15%;
+    border: 0px;
+  }
+  .style-title {
+    text-align: center;
+    font-size: x-large;
+    color: rgba(255, 68, 0, 0.767);
+    font-weight: bold;
+  }
+  .style-text {
+    text-align: center;
+    font-size: large;
+  }
+  @media only screen and (min-width: 1200px){
+    .style-card {
+      width: 70%;
+      margin-left: 15%;
+      margin-top: 15%;
+      border: 0px;
+    }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px){
+    .style-terms {
+      width: 90%;
+    }
+    .style-card {
+      width: 70%;
+      margin-left: 15%;
+      margin-top: 15%;
+      border: 0px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px){
+    .style-terms {
+      width: 90%;
+    }
+    .style-card {
+      width: 90%;
+      margin-left: 15%;
+      margin-top: 15%;
+      border: 0px;
+    }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 768px){
+    .style-terms {
+      width: 90%;
+    }
+    .style-card {
+      width: 90%;
+      margin-left: 0%;
+      margin-top: 15%;
+      border: 0px;
+    }
+    .style-text {
+        text-align: justify;
+        font-size: large;
+    }
+  }
+  @media only screen and (max-width: 557px){
+    .style-terms {
+        width: 90%;
+    }
+    .style-card {
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 0%;
+    border: 0px;
+    }
+    .style-text {
+        text-align: justify;
+        font-size: large;
+    }
+  }
