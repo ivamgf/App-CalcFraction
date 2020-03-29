@@ -22,6 +22,7 @@ import { TermsComponent } from './views/pages/terms/terms.component';
 import { FractionComponent } from './views/pages/fraction/fraction.component';
 import { TheoryComponent } from './views/pages/theory/theory.component';
 import { LoadComponent } from './views/components/load/load.component';
+import { OperationsComponent } from './views/pages/operations/operations.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LoadComponent } from './views/components/load/load.component';
     TermsComponent,
     FractionComponent,
     TheoryComponent,
-    LoadComponent
+    LoadComponent,
+    OperationsComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   calc() {
-    this.router.navigate(['/fraction']);
+    this.router.navigate(['/operations']);
   }
 
 }

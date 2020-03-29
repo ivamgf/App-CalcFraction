@@ -1,5 +1,8 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+// Components Angular
 import { LoadComponent } from './views/components/load/load.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { AboutComponent } from './views/pages/about/about.component';
@@ -8,6 +11,7 @@ import { TermsComponent } from './views/pages/terms/terms.component';
 import { Page404Component } from './views/components/page404/page404.component';
 import { FractionComponent } from './views/pages/fraction/fraction.component';
 import { TheoryComponent } from './views/pages/theory/theory.component';
+import { OperationsComponent } from './views/pages/operations/operations.component';
 
 
 const routes: Routes = [
@@ -35,10 +39,14 @@ const routes: Routes = [
   {
       path: 'terms',
       component: TermsComponent
+  },  
+  {
+    path: 'operations',
+    component: OperationsComponent
   },
   {
-      path: 'fraction',
-      component: FractionComponent
+    path: 'fraction',
+    component: FractionComponent
   },
   {
       path: 'theory',

@@ -1,0 +1,100 @@
+section {
+    background-color: white;
+    height: 500px;    
+  }
+  .style-operations {
+        width: 90%;
+  }
+  .style-card {
+    width: 80%;
+    margin-left: 0%;
+    margin-top: 15%;
+    border: 0px;
+    float: left;
+    position: relative;
+    display: block;
+  }
+  .style-title {
+    text-align: center;
+    font-size: x-large;
+    color: rgba(255, 68, 0, 0.767);
+    font-weight: bold;
+  }
+  .style-text {
+    text-align: center;
+    font-size: large;
+  }
+  .style-btn {
+      float: right;
+  }
+  @media only screen and (min-width: 1200px){
+    .style-card {
+        width: 80%;
+        margin-left: 15%;
+        margin-top: 15%;
+        border: 0px;
+        float: left;
+        position: relative;
+        display: block;
+    }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px){
+    .style-operations {
+      width: 90%;
+    }
+    .style-card {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 15%;
+        border: 0px;
+        float: left;
+        position: relative;
+        display: block;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px){
+    .style-operations {
+      width: 90%;
+    }
+    .style-card {
+        width: 90%;
+        margin-left: 15%;
+        margin-top: 15%;
+        border: 0px;
+        float: left;
+        position: relative;
+        display: block;
+    }
+    section {
+        background-color: white;
+        height: 800px;    
+      }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 768px){
+    .style-operations {
+      width: 90%;
+    }
+    .style-card {
+        width: 90%;
+        margin-left: 10%;
+        margin-top: 15%;
+        border: 0px;
+        float: left;
+        position: relative;
+        display: block;
+    }
+  }
+  @media only screen and (max-width: 557px){
+    .style-operations {
+        width: 95%;
+    }
+    .style-card {
+        width: 95%;
+        margin-left: 5%;
+        margin-top: 0%;
+        border: 0px;
+        float: left;
+        position: relative;
+        display: block;
+    }
+  }
