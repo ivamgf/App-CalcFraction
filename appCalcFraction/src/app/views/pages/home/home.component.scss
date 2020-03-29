@@ -12,8 +12,9 @@ section {
 .style-subtitle {
   margin-top: 15%;
   text-align: center;
-  color: orangered;
+  color: rgba(255, 68, 0, 0.767);
   font-weight: bold;
+  font-size: large;
 }
 .style-icon {
   color: rgba(0, 102, 255, 0.671);
@@ -26,8 +27,11 @@ section {
 }
 .style-text {
   text-align: center;
-  font-size: small;
+  font-size: large;
   font-weight: bold;
+}
+.style-img {
+  width: 80%;
 }
 @media only screen and (min-width: 1200px){
   .style-card {
