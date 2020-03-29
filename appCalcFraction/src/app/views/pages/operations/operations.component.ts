@@ -18,4 +18,16 @@ export class OperationsComponent implements OnInit {
   calc() {
     this.router.navigate(['/fraction']);
   }
+  plus() {
+    this.router.navigate(['/development']);
+  }
+  minus() {
+    this.router.navigate(['/development']);
+  }
+  times() {
+    this.router.navigate(['/development']);
+  }
+  divide() {
+    this.router.navigate(['/development']);
+  }
 }

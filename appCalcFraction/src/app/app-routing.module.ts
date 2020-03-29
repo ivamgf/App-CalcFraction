@@ -12,6 +12,7 @@ import { Page404Component } from './views/components/page404/page404.component';
 import { FractionComponent } from './views/pages/fraction/fraction.component';
 import { TheoryComponent } from './views/pages/theory/theory.component';
 import { OperationsComponent } from './views/pages/operations/operations.component';
+import { DevelopmentComponent } from './views/pages/development/development.component';
 
 
 const routes: Routes = [
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
       path: 'theory',
       component: TheoryComponent
+  },
+  {
+    path: 'development',
+    component: DevelopmentComponent
   },
   {
       path: 'page404',

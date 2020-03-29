@@ -23,6 +23,7 @@ import { FractionComponent } from './views/pages/fraction/fraction.component';
 import { TheoryComponent } from './views/pages/theory/theory.component';
 import { LoadComponent } from './views/components/load/load.component';
 import { OperationsComponent } from './views/pages/operations/operations.component';
+import { DevelopmentComponent } from './views/pages/development/development.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { OperationsComponent } from './views/pages/operations/operations.compone
     FractionComponent,
     TheoryComponent,
     LoadComponent,
-    OperationsComponent
+    OperationsComponent,
+    DevelopmentComponent
   ],
   imports: [
     BrowserModule,
