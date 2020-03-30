@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Imports PrimeNG
 import { AccordionModule } from 'primeng/accordion';
@@ -46,7 +47,9 @@ import { DevelopmentComponent } from './views/pages/development/development.comp
     AppRoutingModule,
     AccordionModule,
     BrowserAnimationsModule,
-    ChartModule
+    ChartModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],

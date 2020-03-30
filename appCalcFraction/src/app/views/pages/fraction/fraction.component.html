@@ -1,4 +1,52 @@
 <section>
-    <p-chart type="pie" [data]="data"></p-chart>
+    <div class="card style-card">        
+
+        <div class="style-form">
+            <h4 class="card-title style-title">Fração</h4>
+            <form [formGroup] = "formFraction">
+                <div class="form-group">
+                    <label for="num">Numerador:</label>
+                    <input type="number" class="form-control" id="num" formControlName="num" required>
+                </div>
+                <div class="form-group">
+                    <label for="den">Denominador:</label>
+                    <input type="number" class="form-control" id="den" formControlName="den" required>
+                </div>
+            </form>
+            <div class="btn-group col-6">
+                <button type="button" class="btn btn-primary" (click)="constructFraction()">
+                    <i class="fas fa-chart-pie"></i>
+                    Gerar
+                </button>                   
+            </div>
+            <div class="btn-group col-6">
+                <button type="button" class="btn btn-primary" (click)="clearFraction()">
+                    <i class="fas fa-eraser"></i>
+                    Limpar
+                </button> 
+            </div>                                
+        </div>
+
+        <div class="style-chart" id="chart">
+            <p-chart type="pie" [data]="data"></p-chart>
+        </div>
+        <div class="card-body">           
+            
+            <div class="container style-fraction col-3" id="fraction">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <span class="style-a" id="a">
+                            {{num}}
+                        </span><br>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="style-b" id="b">
+                            {{den}}
+                        </span>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+    </div>        
 </section>
 

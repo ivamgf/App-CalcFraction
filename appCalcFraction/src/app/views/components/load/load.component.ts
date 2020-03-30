@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./load.component.scss']
 })
 export class LoadComponent implements OnInit {
-  
+
   constructor(
     private router: Router
   ) { }
