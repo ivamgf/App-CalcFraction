@@ -40,7 +40,7 @@ const routes: Routes = [
   {
       path: 'terms',
       component: TermsComponent
-  },  
+  },
   {
     path: 'operations',
     component: OperationsComponent
@@ -50,12 +50,12 @@ const routes: Routes = [
     component: FractionComponent
   },
   {
-      path: 'theory',
-      component: TheoryComponent
-  },
-  {
     path: 'development',
     component: DevelopmentComponent
+  },
+  {
+      path: 'theory',
+      component: TheoryComponent
   },
   {
       path: 'page404',
