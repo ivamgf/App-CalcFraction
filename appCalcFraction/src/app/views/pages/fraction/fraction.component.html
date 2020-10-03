@@ -3,26 +3,32 @@
 
         <div class="style-form">
             <h4 class="card-title style-title">Fração</h4>
-            <form [formGroup] = "formFraction">
-                <div class="form-group">
+            <form id="formNumDen" [formGroup] = "formFraction">
+                <div id="formNum" class="form-group">
                     <label for="num">Numerador:</label>
-                    <input type="number" class="form-control" id="num" formControlName="num" required>
+                    <input type="number" class="form-control" id="num" [textMask]="{mask: maskNum}" max="6" formControlName="num" placeholder="Digite um número de até 6 dígitos" required>
                 </div>
-                <div class="form-group">
+                <div id="formDen" class="form-group">
                     <label for="den">Denominador:</label>
-                    <input type="number" class="form-control" id="den" formControlName="den" required>
+                    <input type="number" class="form-control" id="den" [textMask]="{mask: maskDen}" max="6" formControlName="den" placeholder="Digite um número de até 6 dígitos" required>
                 </div>
             </form>
-            <div class="btn-group col-6">
+            <div id="btnBuild" class="btn-group col-6">
                 <button type="button" class="btn btn-primary" (click)="constructFraction()">
                     <i class="fas fa-chart-pie"></i>
                     Gerar
                 </button>                   
             </div>
-            <div class="btn-group col-6">
+            <div id="btnClear" class="btn-group col-6">
                 <button type="button" class="btn btn-primary" (click)="clearFraction()">
                     <i class="fas fa-eraser"></i>
                     Limpar
+                </button> 
+            </div>
+            <div id="btnRebuild" class="btn-group col-12">
+                <button type="button" class="btn btn-primary" (click)="clearFraction()">
+                    <i class="fas fa-chart-pie"></i>
+                    Nova Fração
                 </button> 
             </div>                                
         </div>
@@ -32,7 +38,7 @@
         </div>
         <div class="card-body">           
             
-            <div class="container style-fraction col-3" id="fraction">
+            <div class="container style-fraction col-6" id="fraction">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <span class="style-a" id="a">
