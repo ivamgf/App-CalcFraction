@@ -15,11 +15,13 @@ export class FractionComponent implements OnInit {
   });
   public data: any;
   public formFrac: any[] = [];
-  public num: number;
-  public den: number;
+  public num: any;
+  public den: any;
   public index: number;
   public total: number;
   public equation1: number;
+  public maskNum = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
+  public maskDen = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -29,6 +31,7 @@ export class FractionComponent implements OnInit {
   ngOnInit(): void {
     document.getElementById('fraction').style.visibility = 'hidden';
     document.getElementById('chart').style.visibility = 'hidden';
+    document.getElementById('btnRebuild').style.visibility = 'hidden';
   }
 
   constructFraction() {
@@ -38,9 +41,19 @@ export class FractionComponent implements OnInit {
     this.index = 100;
     this.equation1 = (this.num / this.den) * this.index;
     this.total = this.index - this.equation1;
+    document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';
     document.getElementById('chart').style.visibility = 'visible';
+    document.getElementById('formNum').style.position = 'relative';
+    document.getElementById('formNum').style.visibility = 'hidden';
+    document.getElementById('formDen').style.position = 'relative';
+    document.getElementById('formDen').style.visibility = 'hidden';
+    document.getElementById('btnBuild').style.position = 'relative';
+    document.getElementById('btnBuild').style.visibility = 'hidden';
+    document.getElementById('btnClear').style.position = 'relative';
+    document.getElementById('btnClear').style.visibility = 'hidden';
+    document.getElementById('btnRebuild').style.visibility = 'visible';
     this.createChart();
   }
 
@@ -50,7 +63,7 @@ export class FractionComponent implements OnInit {
 
   createChart() {
     this.data = {
-      // labels: ['Numerador','Denominador'],
+      labels: ['Numerador','Denominador'],
       datasets: [
           {
               data: [this.total, this.equation1],
