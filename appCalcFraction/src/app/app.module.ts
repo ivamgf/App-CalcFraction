@@ -26,6 +26,7 @@ import { TheoryComponent } from './views/pages/theory/theory.component';
 import { LoadComponent } from './views/components/load/load.component';
 import { OperationsComponent } from './views/pages/operations/operations.component';
 import { DevelopmentComponent } from './views/pages/development/development.component';
+import { MultComponent } from './views/pages/mult/mult.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { DevelopmentComponent } from './views/pages/development/development.comp
     TheoryComponent,
     LoadComponent,
     OperationsComponent,
-    DevelopmentComponent
+    DevelopmentComponent,
+    MultComponent
   ],
   imports: [
     BrowserModule,

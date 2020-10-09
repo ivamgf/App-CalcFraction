@@ -25,7 +25,7 @@ export class OperationsComponent implements OnInit {
     this.router.navigate(['/development']);
   }
   times() {
-    this.router.navigate(['/development']);
+    this.router.navigate(['/mult']);
   }
   divide() {
     this.router.navigate(['/development']);
