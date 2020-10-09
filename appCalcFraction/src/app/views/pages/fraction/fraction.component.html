@@ -6,11 +6,11 @@
             <form id="formNumDen" [formGroup] = "formFraction">
                 <div id="formNum" class="form-group">
                     <label for="num">Numerador:</label>
-                    <input type="number" class="form-control" id="num" [textMask]="{mask: maskNum}" max="6" formControlName="num" placeholder="Digite um número de até 6 dígitos" required>
+                    <input type="text" class="form-control" id="num" [textMask]="{mask: maskNum}" formControlName="num" placeholder="Digite um número de até 6 dígitos" required>
                 </div>
                 <div id="formDen" class="form-group">
                     <label for="den">Denominador:</label>
-                    <input type="number" class="form-control" id="den" [textMask]="{mask: maskDen}" max="6" formControlName="den" placeholder="Digite um número de até 6 dígitos" required>
+                    <input type="text" class="form-control" id="den" [textMask]="{mask: maskDen}" formControlName="den" placeholder="Digite um número de até 6 dígitos" required>
                 </div>
             </form>
             <div id="btnBuild" class="btn-group col-6">

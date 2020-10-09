@@ -20,8 +20,8 @@ export class FractionComponent implements OnInit {
   public index: number;
   public total: number;
   public equation1: number;
-  public maskNum = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
-  public maskDen = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
+  public maskNum = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
+  public maskDen = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -40,7 +40,7 @@ export class FractionComponent implements OnInit {
     this.den = this.formFrac[0].den;
     this.index = 100;
     this.equation1 = (this.num / this.den) * this.index;
-    this.total = this.index - this.equation1;
+    this.total = Math.abs(this.index - this.equation1);
     document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';
@@ -63,7 +63,7 @@ export class FractionComponent implements OnInit {
 
   createChart() {
     this.data = {
-      labels: ['Numerador','Denominador'],
+      labels: ['Denominador','Numerador'],
       datasets: [
           {
               data: [this.total, this.equation1],

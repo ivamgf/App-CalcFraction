@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TextMaskModule } from 'angular2-text-mask';
 
 // Imports PrimeNG
 import { AccordionModule } from 'primeng/accordion';
@@ -49,7 +50,8 @@ import { DevelopmentComponent } from './views/pages/development/development.comp
     BrowserAnimationsModule,
     ChartModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextMaskModule
   ],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
