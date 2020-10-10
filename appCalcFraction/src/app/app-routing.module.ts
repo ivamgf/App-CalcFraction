@@ -14,6 +14,7 @@ import { TheoryComponent } from './views/pages/theory/theory.component';
 import { OperationsComponent } from './views/pages/operations/operations.component';
 import { DevelopmentComponent } from './views/pages/development/development.component';
 import { MultComponent } from './views/pages/mult/mult.component';
+import { DivComponent } from './views/pages/div/div.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'mult',
     component: MultComponent
+  },
+  {
+    path: 'div',
+    component: DivComponent
   },
   {
     path: 'development',

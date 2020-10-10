@@ -28,6 +28,6 @@ export class OperationsComponent implements OnInit {
     this.router.navigate(['/mult']);
   }
   divide() {
-    this.router.navigate(['/development']);
+    this.router.navigate(['/div']);
   }
 }
