@@ -43,8 +43,8 @@ export class FractionComponent implements OnInit {
     this.den = this.formFrac[0].den.replace(/_/i, '');
     this.newDen = parseInt(this.den);
     this.index = 100;
-    this.equation1 = (this.newNum / this.newDen) * this.index;    
-    this.total = Math.abs(this.index - this.equation1);
+    this.equation1 = Math.trunc((this.newNum / this.newDen) * this.index);    
+    this.total = Math.trunc(Math.abs(this.index - this.equation1));
     document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';

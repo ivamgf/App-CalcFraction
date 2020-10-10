@@ -81,8 +81,8 @@ export class MultComponent implements OnInit {
     this.index = 100;
     this.resultNum = this.newNum * this.newNum2;
     this.resultDen = this.newDen * this.newDen2;
-    this.equation1 = (this.resultNum / this.resultDen) * this.index;    
-    this.total = Math.abs(this.index - this.equation1);
+    this.equation1 = Math.trunc((this.resultNum / this.resultDen) * this.index);    
+    this.total = Math.trunc(Math.abs(this.index - this.equation1));
     document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';

@@ -19,7 +19,7 @@ export class OperationsComponent implements OnInit {
     this.router.navigate(['/fraction']);
   }
   plus() {
-    this.router.navigate(['/development']);
+    this.router.navigate(['/plus']);
   }
   minus() {
     this.router.navigate(['/development']);

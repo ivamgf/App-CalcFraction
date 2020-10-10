@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-div',
-  templateUrl: './div.component.html',
-  styleUrls: ['./div.component.scss']
+  selector: 'app-plus',
+  templateUrl: './plus.component.html',
+  styleUrls: ['./plus.component.scss']
 })
-export class DivComponent implements OnInit {
+export class PlusComponent implements OnInit {
 
-  formDiv = this.formBuilder.group({
+  formPlus = this.formBuilder.group({
     num: ['', [Validators.required, Validators.nullValidator]],
     den: ['', [Validators.required, Validators.nullValidator]],
     num2: ['', [Validators.required, Validators.nullValidator]],
@@ -33,10 +32,10 @@ export class DivComponent implements OnInit {
   public newDen2 : number;
   public resultNum : number;
   public resultDen : number;
-  public graphNum : number;
-  public graphDen : number;
-  public title1 : any;
-  public title2: any;
+  public rest : number;
+  public mmcNum1: number;
+  public mmcNum2: number;
+  public mmc : number;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -56,9 +55,20 @@ export class DivComponent implements OnInit {
     document.getElementById('formNum2').style.visibility = 'hidden';
     document.getElementById('formDen2').style.position = 'absolute';
     document.getElementById('formDen2').style.visibility = 'hidden';
-    document.getElementById('btnDiv').style.position = 'relative';
+    document.getElementById('btnPlus').style.position = 'relative';
   }
-  divFraction() {
+  mmcFraction(a, b) {
+    this.mmcNum1 = a;
+    this.mmcNum2 = b;
+    while (b != 0) {
+      this.rest = a % b;
+      a = b;
+      b = this.rest;
+    }
+    this.mmc = (this.mmcNum1 * this.mmcNum2) / a;
+    return a;    
+  }
+  plusFraction() {
     document.getElementById('formNum').style.position = 'absolute';
     document.getElementById('formNum').style.visibility = 'hidden';
     document.getElementById('formDen').style.position = 'absolute';
@@ -71,10 +81,10 @@ export class DivComponent implements OnInit {
     document.getElementById('btnBuild').style.visibility = 'visible';
     document.getElementById('btnClear').style.position = 'relative';
     document.getElementById('btnClear').style.visibility = 'visible';    
-    document.getElementById('btnDiv').style.visibility = 'hidden';
+    document.getElementById('btnPlus').style.visibility = 'hidden';
   }
   constructFraction() {
-    this.formFrac.push(this.formDiv.value);
+    this.formFrac.push(this.formPlus.value);
     this.num = this.formFrac[0].num.replace(/_/i, '');
     this.newNum = parseInt(this.num);
     this.den = this.formFrac[0].den.replace(/_/i, '');
@@ -83,22 +93,12 @@ export class DivComponent implements OnInit {
     this.newNum2 = parseInt(this.num2);
     this.den2 = this.formFrac[0].den2.replace(/_/i, '');
     this.newDen2 = parseInt(this.den2);
-    this.index = 100;
-    this.resultNum = this.newNum * this.newDen2;
-    this.resultDen = this.newDen * this.newNum2;
-    this.equation1 = (this.resultNum / this.resultDen) * this.index;    
-    this.total = Math.abs(this.index - this.equation1);
-    if (this.resultNum > this.resultDen) {
-      this.graphNum = this.equation1;
-      this.graphDen = this.total;
-      this.title1 = 'Numerador';
-      this.title2 = 'Denominador';           
-    } else {
-      this.graphNum = Math.trunc(this.total);
-      this.graphDen = Math.trunc(this.equation1);
-      this.title1 = 'Denominador';
-      this.title2 = 'Numerador';
-    };
+    this.mmcFraction(this.newDen, this.newDen2);  
+    this.index = 100;    
+    this.resultNum = ((this.mmc / this.newDen) * this.newNum) + ((this.mmc / this.newDen2) * this.newNum2);
+    this.resultDen = this.mmc;  
+    this.equation1 = Math.trunc((this.resultNum / this.resultDen) * this.index);    
+    this.total = Math.trunc(Math.abs(this.index - this.equation1));
     document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';
@@ -116,20 +116,19 @@ export class DivComponent implements OnInit {
     document.getElementById('btnClear').style.visibility = 'hidden';
     document.getElementById('btnRebuild').style.position = 'relative';
     document.getElementById('btnRebuild').style.visibility = 'visible';
-    document.getElementById('btnDiv').style.position = 'absolute';
+    document.getElementById('btnPlus').style.position = 'absolute';
     this.createChart();
   }
-
   clearFraction() {
     location.reload();
   }
 
   createChart() {
     this.data = {
-      labels: [this.title1,this.title2],
+      labels: ['Denominador','Numerador'],
       datasets: [
           {
-              data: [this.graphNum, this.graphDen],
+              data: [this.total, this.equation1],
               backgroundColor: [
                   '#FF6384',
                   '#36A2EB'
