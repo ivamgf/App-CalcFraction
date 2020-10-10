@@ -36,6 +36,14 @@ export class PlusComponent implements OnInit {
   public mmcNum1: number;
   public mmcNum2: number;
   public mmc : number;
+  public simpleFrac : number;
+  public simpleNum : number;
+  public simpleDen : number;
+  public mdcNum1: number;
+  public mdcNum2: number;
+  public mdc : number;
+  public numFinal : number;
+  public denFinal : number;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -68,6 +76,17 @@ export class PlusComponent implements OnInit {
     this.mmc = (this.mmcNum1 * this.mmcNum2) / a;
     return a;    
   }
+  mdcFraction(c, d) {
+    this.mdcNum1 = c;
+    this.mdcNum2 = d;
+    while (d != 0) {
+      this.rest = c % d;
+      c = d;
+      d = this.rest;
+    }
+    this.mdc = c;
+    return c;
+  }  
   plusFraction() {
     document.getElementById('formNum').style.position = 'absolute';
     document.getElementById('formNum').style.visibility = 'hidden';
@@ -99,6 +118,9 @@ export class PlusComponent implements OnInit {
     this.resultDen = this.mmc;  
     this.equation1 = Math.trunc((this.resultNum / this.resultDen) * this.index);    
     this.total = Math.trunc(Math.abs(this.index - this.equation1));
+    this.mdcFraction(this.resultNum, this.resultDen);
+    this.numFinal = this.resultNum / this.mdc;
+    this.denFinal = this.resultDen / this.mdc;
     document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';

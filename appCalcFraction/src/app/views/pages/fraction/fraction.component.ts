@@ -24,6 +24,12 @@ export class FractionComponent implements OnInit {
   public maskDen = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
   public newNum : number;
   public newDen : number;
+  public rest : number;
+  public mdcNum1: number;
+  public mdcNum2: number;
+  public mdc : number;
+  public numFinal : number;
+  public denFinal : number;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -35,7 +41,17 @@ export class FractionComponent implements OnInit {
     document.getElementById('chart').style.visibility = 'hidden';
     document.getElementById('btnRebuild').style.visibility = 'hidden';
   }
-
+  mdcFraction(c, d) {
+    this.mdcNum1 = c;
+    this.mdcNum2 = d;
+    while (d != 0) {
+      this.rest = c % d;
+      c = d;
+      d = this.rest;
+    }
+    this.mdc = c;
+    return c;
+  }
   constructFraction() {
     this.formFrac.push(this.formFraction.value);
     this.num = this.formFrac[0].num.replace(/_/i, '');
@@ -45,6 +61,9 @@ export class FractionComponent implements OnInit {
     this.index = 100;
     this.equation1 = Math.trunc((this.newNum / this.newDen) * this.index);    
     this.total = Math.trunc(Math.abs(this.index - this.equation1));
+    this.mdcFraction(this.newNum, this.newDen);
+    this.numFinal = this.newNum / this.mdc;
+    this.denFinal = this.newDen / this.mdc;
     document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';

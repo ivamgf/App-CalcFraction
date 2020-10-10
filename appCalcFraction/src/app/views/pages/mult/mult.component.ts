@@ -32,6 +32,12 @@ export class MultComponent implements OnInit {
   public newDen2 : number;
   public resultNum : number;
   public resultDen : number;
+  public rest : number;
+  public mdcNum1: number;
+  public mdcNum2: number;
+  public mdc : number;
+  public numFinal : number;
+  public denFinal : number;
   
   constructor(
     private formBuilder: FormBuilder,
@@ -52,6 +58,17 @@ export class MultComponent implements OnInit {
     document.getElementById('formDen2').style.position = 'absolute';
     document.getElementById('formDen2').style.visibility = 'hidden';
     document.getElementById('btnMult').style.position = 'relative';
+  }
+  mdcFraction(c, d) {
+    this.mdcNum1 = c;
+    this.mdcNum2 = d;
+    while (d != 0) {
+      this.rest = c % d;
+      c = d;
+      d = this.rest;
+    }
+    this.mdc = c;
+    return c;
   }
   multFraction() {
     document.getElementById('formNum').style.position = 'absolute';
@@ -83,6 +100,9 @@ export class MultComponent implements OnInit {
     this.resultDen = this.newDen * this.newDen2;
     this.equation1 = Math.trunc((this.resultNum / this.resultDen) * this.index);    
     this.total = Math.trunc(Math.abs(this.index - this.equation1));
+    this.mdcFraction(this.resultNum, this.resultDen);
+    this.numFinal = this.resultNum / this.mdc;
+    this.denFinal = this.resultDen / this.mdc;
     document.getElementById('formNumDen').style.position = 'absolute';
     document.getElementById('fraction').style.position = 'relative';
     document.getElementById('fraction').style.visibility = 'visible';
