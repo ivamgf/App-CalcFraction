@@ -21,17 +21,17 @@
                     <input type="text" class="form-control" id="den2" [textMask]="{mask: maskDen}" formControlName="den2" placeholder="Digite um número de até 6 dígitos" required>
                 </div>
             </form>
-            <div id="btnBuild" class="btn-group col-6">
+            <div id="btnBuild" class="btn-group col-12">
                 <button type="button" class="btn btn-primary" (click)="constructFraction()">
                     <i class="fas fa-equals"></i>
                 </button>                   
             </div>
-            <div id="btnClear" class="btn-group col-6">
+            <!--<div id="btnClear" class="btn-group col-6">
                 <button type="button" class="btn btn-primary" (click)="clearFraction()">
                     <i class="fas fa-eraser"></i>
                     Limpar
                 </button>
-            </div>
+            </div>-->
             <div id="btnRebuild" class="btn-group col-12">
                 <button type="button" class="btn btn-primary" (click)="newOperation()">
                     <i class="fas fa-chart-pie"></i>

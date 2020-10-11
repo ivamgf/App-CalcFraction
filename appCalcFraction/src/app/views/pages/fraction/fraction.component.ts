@@ -79,13 +79,14 @@ export class FractionComponent implements OnInit {
     document.getElementById('btnRebuild').style.visibility = 'visible';
     this.createChart();
   }
-
+  /*
   clearFraction() {
     this.formFraction = this.formBuilder.group({
       num: ['', [Validators.required, Validators.nullValidator]],
       den: ['', [Validators.required, Validators.nullValidator]]
     });
   }
+  */
   newOperation() {
     this.router.navigate(['/operations']);
   }

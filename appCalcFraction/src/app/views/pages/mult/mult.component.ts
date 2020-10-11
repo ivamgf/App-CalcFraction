@@ -122,7 +122,7 @@ export class MultComponent implements OnInit {
     document.getElementById('btnMult').style.position = 'absolute';
     this.createChart();
   }
-
+  /*
   clearFraction() {
     this.formMult = this.formBuilder.group({
       num: ['', [Validators.required, Validators.nullValidator]],
@@ -131,6 +131,7 @@ export class MultComponent implements OnInit {
       den2: ['', [Validators.required, Validators.nullValidator]]
     });
   }
+  */
   newOperation() {
     this.router.navigate(['/operations']);
   }

@@ -139,7 +139,7 @@ export class DivComponent implements OnInit {
     document.getElementById('btnDiv').style.position = 'absolute';
     this.createChart();
   }
-
+  /*
   clearFraction() {
     this.formDiv = this.formBuilder.group({
       num: ['', [Validators.required, Validators.nullValidator]],
@@ -148,6 +148,7 @@ export class DivComponent implements OnInit {
       den2: ['', [Validators.required, Validators.nullValidator]]
     });
   }
+  */
   newOperation() {
     this.router.navigate(['/operations']);
   }

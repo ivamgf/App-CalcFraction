@@ -141,6 +141,7 @@ export class PlusComponent implements OnInit {
     document.getElementById('btnPlus').style.position = 'absolute';
     this.createChart();
   }
+  /*
   clearFraction() {
     this.formPlus = this.formBuilder.group({
       num: ['', [Validators.required, Validators.nullValidator]],
@@ -149,6 +150,7 @@ export class PlusComponent implements OnInit {
       den2: ['', [Validators.required, Validators.nullValidator]]
     });
   }
+  */
   newOperation() {
     this.router.navigate(['/operations']);
   }

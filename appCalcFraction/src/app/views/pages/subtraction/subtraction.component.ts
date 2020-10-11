@@ -144,6 +144,7 @@ export class SubtractionComponent implements OnChanges, OnInit {
     document.getElementById('btnSubt').style.position = 'absolute';
     this.createChart();
   }
+  /*
   clearFraction() {
     this.formSubt = this.formBuilder.group({
       num: ['', [Validators.required, Validators.nullValidator]],
@@ -152,6 +153,7 @@ export class SubtractionComponent implements OnChanges, OnInit {
       den2: ['', [Validators.required, Validators.nullValidator]]
     });
   }
+  */
   newOperation() {
     this.router.navigate(['/operations']);
   }
