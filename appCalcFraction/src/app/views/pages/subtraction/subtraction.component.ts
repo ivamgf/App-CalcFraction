@@ -60,8 +60,8 @@ export class SubtractionComponent implements OnChanges, OnInit {
     document.getElementById('btnRebuild').style.visibility = 'hidden';
     document.getElementById('btnBuild').style.position = 'absolute';
     document.getElementById('btnBuild').style.visibility = 'hidden';
-    document.getElementById('btnClear').style.position = 'absolute';
-    document.getElementById('btnClear').style.visibility = 'hidden';
+    // document.getElementById('btnClear').style.position = 'absolute';
+    // document.getElementById('btnClear').style.visibility = 'hidden';
     document.getElementById('formNum2').style.position = 'absolute';
     document.getElementById('formNum2').style.visibility = 'hidden';
     document.getElementById('formDen2').style.position = 'absolute';
@@ -101,16 +101,16 @@ export class SubtractionComponent implements OnChanges, OnInit {
     document.getElementById('formDen2').style.visibility = 'visible';
     document.getElementById('btnBuild').style.position = 'relative';
     document.getElementById('btnBuild').style.visibility = 'visible';
-    document.getElementById('btnClear').style.position = 'relative';
-    document.getElementById('btnClear').style.visibility = 'visible';
+    // document.getElementById('btnClear').style.position = 'relative';
+    // document.getElementById('btnClear').style.visibility = 'visible';
     document.getElementById('btnSubt').style.visibility = 'hidden';
   }
   constructFraction() {
     this.formFrac.push(this.formSubt.value);
     this.num = this.formFrac[0].num.replace(/_/i, '');
-    this.newNum = parseInt(this.num, 6);
+    this.newNum = parseInt(this.num);
     this.den = this.formFrac[0].den.replace(/_/i, '');
-    this.newDen = parseInt(this.den, 6);
+    this.newDen = parseInt(this.den);
     this.num2 = this.formFrac[0].num2.replace(/_/i, '');
     this.newNum2 = parseInt(this.num2);
     this.den2 = this.formFrac[0].den2.replace(/_/i, '');
@@ -137,8 +137,8 @@ export class SubtractionComponent implements OnChanges, OnInit {
     document.getElementById('formDen2').style.visibility = 'hidden';
     document.getElementById('btnBuild').style.position = 'absolute';
     document.getElementById('btnBuild').style.visibility = 'hidden';
-    document.getElementById('btnClear').style.position = 'absolute';
-    document.getElementById('btnClear').style.visibility = 'hidden';
+    // document.getElementById('btnClear').style.position = 'absolute';
+    // document.getElementById('btnClear').style.visibility = 'hidden';
     document.getElementById('btnRebuild').style.position = 'relative';
     document.getElementById('btnRebuild').style.visibility = 'visible';
     document.getElementById('btnSubt').style.position = 'absolute';

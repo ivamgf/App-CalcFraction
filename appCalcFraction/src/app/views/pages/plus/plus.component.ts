@@ -57,8 +57,8 @@ export class PlusComponent implements OnInit {
     document.getElementById('btnRebuild').style.visibility = 'hidden';
     document.getElementById('btnBuild').style.position = 'absolute';
     document.getElementById('btnBuild').style.visibility = 'hidden';
-    document.getElementById('btnClear').style.position = 'absolute';
-    document.getElementById('btnClear').style.visibility = 'hidden';
+    // document.getElementById('btnClear').style.position = 'absolute';
+    // document.getElementById('btnClear').style.visibility = 'hidden';
     document.getElementById('formNum2').style.position = 'absolute';
     document.getElementById('formNum2').style.visibility = 'hidden';
     document.getElementById('formDen2').style.position = 'absolute';
@@ -98,8 +98,8 @@ export class PlusComponent implements OnInit {
     document.getElementById('formDen2').style.visibility = 'visible';
     document.getElementById('btnBuild').style.position = 'relative';
     document.getElementById('btnBuild').style.visibility = 'visible';
-    document.getElementById('btnClear').style.position = 'relative';
-    document.getElementById('btnClear').style.visibility = 'visible';
+    // document.getElementById('btnClear').style.position = 'relative';
+    // document.getElementById('btnClear').style.visibility = 'visible';
     document.getElementById('btnPlus').style.visibility = 'hidden';
   }
   constructFraction() {
@@ -134,8 +134,8 @@ export class PlusComponent implements OnInit {
     document.getElementById('formDen2').style.visibility = 'hidden';
     document.getElementById('btnBuild').style.position = 'absolute';
     document.getElementById('btnBuild').style.visibility = 'hidden';
-    document.getElementById('btnClear').style.position = 'absolute';
-    document.getElementById('btnClear').style.visibility = 'hidden';
+    // document.getElementById('btnClear').style.position = 'absolute';
+    // document.getElementById('btnClear').style.visibility = 'hidden';
     document.getElementById('btnRebuild').style.position = 'relative';
     document.getElementById('btnRebuild').style.visibility = 'visible';
     document.getElementById('btnPlus').style.position = 'absolute';

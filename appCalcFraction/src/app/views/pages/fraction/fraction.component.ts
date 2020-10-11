@@ -74,8 +74,8 @@ export class FractionComponent implements OnInit {
     document.getElementById('formDen').style.visibility = 'hidden';
     document.getElementById('btnBuild').style.position = 'absolute';
     document.getElementById('btnBuild').style.visibility = 'hidden';
-    document.getElementById('btnClear').style.position = 'absolute';
-    document.getElementById('btnClear').style.visibility = 'hidden';
+    // document.getElementById('btnClear').style.position = 'absolute';
+    // document.getElementById('btnClear').style.visibility = 'hidden';
     document.getElementById('btnRebuild').style.visibility = 'visible';
     this.createChart();
   }
