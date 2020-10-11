@@ -16,6 +16,7 @@ import { DevelopmentComponent } from './views/pages/development/development.comp
 import { MultComponent } from './views/pages/mult/mult.component';
 import { DivComponent } from './views/pages/div/div.component';
 import { PlusComponent } from './views/pages/plus/plus.component';
+import { SubtractionComponent } from './views/pages/subtraction/subtraction.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'plus',
     component: PlusComponent
+  },
+  {
+    path: 'subt',
+    component: SubtractionComponent
   },
   {
     path: 'development',

@@ -22,14 +22,14 @@ export class FractionComponent implements OnInit {
   public equation1: number;
   public maskNum = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
   public maskDen = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
-  public newNum : number;
-  public newDen : number;
-  public rest : number;
+  public newNum: number;
+  public newDen: number;
+  public rest: number;
   public mdcNum1: number;
   public mdcNum2: number;
-  public mdc : number;
-  public numFinal : number;
-  public denFinal : number;
+  public mdc: number;
+  public numFinal: number;
+  public denFinal: number;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -44,7 +44,7 @@ export class FractionComponent implements OnInit {
   mdcFraction(c, d) {
     this.mdcNum1 = c;
     this.mdcNum2 = d;
-    while (d != 0) {
+    while (d !== 0) {
       this.rest = c % d;
       c = d;
       d = this.rest;
@@ -59,7 +59,7 @@ export class FractionComponent implements OnInit {
     this.den = this.formFrac[0].den.replace(/_/i, '');
     this.newDen = parseInt(this.den);
     this.index = 100;
-    this.equation1 = Math.trunc((this.newNum / this.newDen) * this.index);    
+    this.equation1 = Math.trunc((this.newNum / this.newDen) * this.index);
     this.total = Math.trunc(Math.abs(this.index - this.equation1));
     this.mdcFraction(this.newNum, this.newDen);
     this.numFinal = this.newNum / this.mdc;
@@ -86,7 +86,7 @@ export class FractionComponent implements OnInit {
 
   createChart() {
     this.data = {
-      labels: ['Denominador','Numerador'],
+      labels: ['Denominador', 'Numerador'],
       datasets: [
           {
               data: [this.total, this.equation1],

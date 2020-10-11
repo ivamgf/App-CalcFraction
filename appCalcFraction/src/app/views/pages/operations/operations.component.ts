@@ -22,7 +22,7 @@ export class OperationsComponent implements OnInit {
     this.router.navigate(['/plus']);
   }
   minus() {
-    this.router.navigate(['/development']);
+    this.router.navigate(['/subt']);
   }
   times() {
     this.router.navigate(['/mult']);

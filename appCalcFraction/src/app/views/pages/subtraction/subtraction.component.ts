@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-plus',
-  templateUrl: './plus.component.html',
-  styleUrls: ['./plus.component.scss']
+  selector: 'app-subtraction',
+  templateUrl: './subtraction.component.html',
+  styleUrls: ['./subtraction.component.scss']
 })
-export class PlusComponent implements OnInit {
+export class SubtractionComponent implements OnInit {
 
-  formPlus = this.formBuilder.group({
+  formSubt = this.formBuilder.group({
     num: ['', [Validators.required, Validators.nullValidator]],
     den: ['', [Validators.required, Validators.nullValidator]],
     num2: ['', [Validators.required, Validators.nullValidator]],
@@ -63,7 +63,7 @@ export class PlusComponent implements OnInit {
     document.getElementById('formNum2').style.visibility = 'hidden';
     document.getElementById('formDen2').style.position = 'absolute';
     document.getElementById('formDen2').style.visibility = 'hidden';
-    document.getElementById('btnPlus').style.position = 'relative';
+    document.getElementById('btnSubt').style.position = 'relative';
   }
   mmcFraction(a, b) {
     this.mmcNum1 = a;
@@ -87,7 +87,7 @@ export class PlusComponent implements OnInit {
     this.mdc = c;
     return c;
   }
-  plusFraction() {
+  subtFraction() {
     document.getElementById('formNum').style.position = 'absolute';
     document.getElementById('formNum').style.visibility = 'hidden';
     document.getElementById('formDen').style.position = 'absolute';
@@ -100,10 +100,10 @@ export class PlusComponent implements OnInit {
     document.getElementById('btnBuild').style.visibility = 'visible';
     document.getElementById('btnClear').style.position = 'relative';
     document.getElementById('btnClear').style.visibility = 'visible';
-    document.getElementById('btnPlus').style.visibility = 'hidden';
+    document.getElementById('btnSubt').style.visibility = 'hidden';
   }
   constructFraction() {
-    this.formFrac.push(this.formPlus.value);
+    this.formFrac.push(this.formSubt.value);
     this.num = this.formFrac[0].num.replace(/_/i, '');
     this.newNum = parseInt(this.num);
     this.den = this.formFrac[0].den.replace(/_/i, '');
@@ -114,7 +114,7 @@ export class PlusComponent implements OnInit {
     this.newDen2 = parseInt(this.den2);
     this.mmcFraction(this.newDen, this.newDen2);
     this.index = 100;
-    this.resultNum = ((this.mmc / this.newDen) * this.newNum) + ((this.mmc / this.newDen2) * this.newNum2);
+    this.resultNum = ((this.mmc / this.newDen) * this.newNum) - ((this.mmc / this.newDen2) * this.newNum2);
     this.resultDen = this.mmc;
     this.equation1 = Math.trunc((this.resultNum / this.resultDen) * this.index);
     this.total = Math.trunc(Math.abs(this.index - this.equation1));
@@ -138,7 +138,7 @@ export class PlusComponent implements OnInit {
     document.getElementById('btnClear').style.visibility = 'hidden';
     document.getElementById('btnRebuild').style.position = 'relative';
     document.getElementById('btnRebuild').style.visibility = 'visible';
-    document.getElementById('btnPlus').style.position = 'absolute';
+    document.getElementById('btnSubt').style.position = 'absolute';
     this.createChart();
   }
   clearFraction() {

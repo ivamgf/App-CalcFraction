@@ -1,0 +1,74 @@
+<section>
+    <div class="card style-card">        
+
+        <div class="style-form">
+            <h4 class="card-title style-title">Subtração</h4>
+            <form id="formNumDen" [formGroup] = "formSubt">
+                <div id="formNum" class="form-group">
+                    <label for="num">Numerador:</label>
+                    <input type="text" class="form-control" id="num" [textMask]="{mask: maskNum}" formControlName="num" placeholder="Digite um número de até 6 dígitos" required>
+                </div>
+                <div id="formDen" class="form-group">
+                    <label for="den">Denominador:</label>
+                    <input type="text" class="form-control" id="den" [textMask]="{mask: maskDen}" formControlName="den" placeholder="Digite um número de até 6 dígitos" required>
+                </div>
+                <div id="formNum2" class="form-group">
+                    <label for="num">Numerador:</label>
+                    <input type="text" class="form-control" id="num2" [textMask]="{mask: maskNum}" formControlName="num2" placeholder="Digite um número de até 6 dígitos" required>
+                </div>
+                <div id="formDen2" class="form-group">
+                    <label for="den">Denominador:</label>
+                    <input type="text" class="form-control" id="den2" [textMask]="{mask: maskDen}" formControlName="den2" placeholder="Digite um número de até 6 dígitos" required>
+                </div>
+            </form>
+            <div id="btnBuild" class="btn-group col-6">
+                <button type="button" class="btn btn-primary" (click)="constructFraction()">
+                    <i class="fas fa-equals"></i>
+                </button>                   
+            </div>
+            <div id="btnClear" class="btn-group col-6">
+                <button type="button" class="btn btn-primary" (click)="clearFraction()">
+                    <i class="fas fa-eraser"></i>
+                    Limpar
+                </button> 
+            </div>
+            <div id="btnRebuild" class="btn-group col-12">
+                <button type="button" class="btn btn-primary" (click)="clearFraction()">
+                    <i class="fas fa-chart-pie"></i>
+                    Nova Fração
+                </button> 
+            </div>
+            <div id="btnSubt" class="btn-group col-12">
+                <button type="button" class="btn btn-primary" (click)="subtFraction()">
+                    <i class="fas fa-window-close"></i>
+                    Subtração
+                </button>                   
+            </div>                                
+        </div>
+
+        <div class="style-chart" id="chart">
+            <p-chart type="pie" [data]="data"></p-chart>
+        </div>
+        <div class="card-body">           
+            
+            <div class="container style-fraction col-6" id="fraction">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <span class="style-a" id="a">
+                            {{numFinal}}
+                        </span><br>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="style-b" id="b">
+                            {{denFinal}}
+                        </span>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+    </div>        
+</section>
+
+
+
+

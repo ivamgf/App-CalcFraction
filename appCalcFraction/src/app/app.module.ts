@@ -29,6 +29,7 @@ import { DevelopmentComponent } from './views/pages/development/development.comp
 import { MultComponent } from './views/pages/mult/mult.component';
 import { DivComponent } from './views/pages/div/div.component';
 import { PlusComponent } from './views/pages/plus/plus.component';
+import { SubtractionComponent } from './views/pages/subtraction/subtraction.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PlusComponent } from './views/pages/plus/plus.component';
     DevelopmentComponent,
     MultComponent,
     DivComponent,
-    PlusComponent
+    PlusComponent,
+    SubtractionComponent
   ],
   imports: [
     BrowserModule,

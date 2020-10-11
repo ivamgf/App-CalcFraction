@@ -27,22 +27,22 @@ export class DivComponent implements OnInit {
   public equation1: number;
   public maskNum = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
   public maskDen = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
-  public newNum : number;
-  public newDen : number;
-  public newNum2 : number;
-  public newDen2 : number;
-  public resultNum : number;
-  public resultDen : number;
-  public graphNum : number;
-  public graphDen : number;
-  public title1 : any;
+  public newNum: number;
+  public newDen: number;
+  public newNum2: number;
+  public newDen2: number;
+  public resultNum: number;
+  public resultDen: number;
+  public graphNum: number;
+  public graphDen: number;
+  public title1: any;
   public title2: any;
-  public rest : number;
+  public rest: number;
   public mdcNum1: number;
   public mdcNum2: number;
-  public mdc : number;
-  public numFinal : number;
-  public denFinal : number;
+  public mdc: number;
+  public numFinal: number;
+  public denFinal: number;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -67,7 +67,7 @@ export class DivComponent implements OnInit {
   mdcFraction(c, d) {
     this.mdcNum1 = c;
     this.mdcNum2 = d;
-    while (d != 0) {
+    while (d !== 0) {
       this.rest = c % d;
       c = d;
       d = this.rest;
@@ -87,7 +87,7 @@ export class DivComponent implements OnInit {
     document.getElementById('btnBuild').style.position = 'relative';
     document.getElementById('btnBuild').style.visibility = 'visible';
     document.getElementById('btnClear').style.position = 'relative';
-    document.getElementById('btnClear').style.visibility = 'visible';    
+    document.getElementById('btnClear').style.visibility = 'visible';
     document.getElementById('btnDiv').style.visibility = 'hidden';
   }
   constructFraction() {
@@ -103,19 +103,19 @@ export class DivComponent implements OnInit {
     this.index = 100;
     this.resultNum = this.newNum * this.newDen2;
     this.resultDen = this.newDen * this.newNum2;
-    this.equation1 = (this.resultNum / this.resultDen) * this.index;    
+    this.equation1 = (this.resultNum / this.resultDen) * this.index;
     this.total = Math.abs(this.index - this.equation1);
     if (this.resultNum > this.resultDen) {
       this.graphNum = this.equation1;
       this.graphDen = this.total;
       this.title1 = 'Numerador';
-      this.title2 = 'Denominador';           
+      this.title2 = 'Denominador';
     } else {
       this.graphNum = Math.trunc(this.total);
       this.graphDen = Math.trunc(this.equation1);
       this.title1 = 'Denominador';
       this.title2 = 'Numerador';
-    };
+    }
     this.mdcFraction(this.resultNum, this.resultDen);
     this.numFinal = this.resultNum / this.mdc;
     this.denFinal = this.resultDen / this.mdc;
@@ -146,7 +146,7 @@ export class DivComponent implements OnInit {
 
   createChart() {
     this.data = {
-      labels: [this.title1,this.title2],
+      labels: [this.title1, this.title2],
       datasets: [
           {
               data: [this.graphNum, this.graphDen],
