@@ -55,9 +55,9 @@ export class FractionComponent implements OnInit {
   constructFraction() {
     this.formFrac.push(this.formFraction.value);
     this.num = this.formFrac[0].num.replace(/_/i, '');
-    this.newNum = parseInt(this.num);
+    this.newNum = parseInt(this.num, 6);
     this.den = this.formFrac[0].den.replace(/_/i, '');
-    this.newDen = parseInt(this.den);
+    this.newDen = parseInt(this.den, 6);
     this.index = 100;
     this.equation1 = Math.trunc((this.newNum / this.newDen) * this.index);
     this.total = Math.trunc(Math.abs(this.index - this.equation1));

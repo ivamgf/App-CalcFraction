@@ -87,13 +87,13 @@ export class MultComponent implements OnInit {
   constructFraction() {
     this.formFrac.push(this.formMult.value);
     this.num = this.formFrac[0].num.replace(/_/i, '');
-    this.newNum = parseInt(this.num);
+    this.newNum = parseInt(this.num, 6);
     this.den = this.formFrac[0].den.replace(/_/i, '');
-    this.newDen = parseInt(this.den);
+    this.newDen = parseInt(this.den, 6);
     this.num2 = this.formFrac[0].num2.replace(/_/i, '');
-    this.newNum2 = parseInt(this.num2);
+    this.newNum2 = parseInt(this.num2, 6);
     this.den2 = this.formFrac[0].den2.replace(/_/i, '');
-    this.newDen2 = parseInt(this.den2);
+    this.newDen2 = parseInt(this.den2, 6);
     this.index = 100;
     this.resultNum = this.newNum * this.newNum2;
     this.resultDen = this.newDen * this.newDen2;
