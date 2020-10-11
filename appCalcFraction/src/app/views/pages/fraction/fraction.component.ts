@@ -81,7 +81,13 @@ export class FractionComponent implements OnInit {
   }
 
   clearFraction() {
-    location.reload();
+    this.formFraction = this.formBuilder.group({
+      num: ['', [Validators.required, Validators.nullValidator]],
+      den: ['', [Validators.required, Validators.nullValidator]]
+    });
+  }
+  newOperation() {
+    this.router.navigate(['/operations']);
   }
 
   createChart() {

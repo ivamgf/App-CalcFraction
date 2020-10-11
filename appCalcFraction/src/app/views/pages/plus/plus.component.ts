@@ -142,7 +142,15 @@ export class PlusComponent implements OnInit {
     this.createChart();
   }
   clearFraction() {
-    location.reload();
+    this.formPlus = this.formBuilder.group({
+      num: ['', [Validators.required, Validators.nullValidator]],
+      den: ['', [Validators.required, Validators.nullValidator]],
+      num2: ['', [Validators.required, Validators.nullValidator]],
+      den2: ['', [Validators.required, Validators.nullValidator]]
+    });
+  }
+  newOperation() {
+    this.router.navigate(['/operations']);
   }
 
   createChart() {

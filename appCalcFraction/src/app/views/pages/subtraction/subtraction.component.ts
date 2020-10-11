@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './subtraction.component.html',
   styleUrls: ['./subtraction.component.scss']
 })
-export class SubtractionComponent implements OnInit {
+export class SubtractionComponent implements OnChanges, OnInit {
 
   formSubt = this.formBuilder.group({
     num: ['', [Validators.required, Validators.nullValidator]],
@@ -49,6 +49,9 @@ export class SubtractionComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router
   ) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void {
     document.getElementById('fraction').style.visibility = 'hidden';
@@ -109,9 +112,9 @@ export class SubtractionComponent implements OnInit {
     this.den = this.formFrac[0].den.replace(/_/i, '');
     this.newDen = parseInt(this.den, 6);
     this.num2 = this.formFrac[0].num2.replace(/_/i, '');
-    this.newNum2 = parseInt(this.num2, 6);
+    this.newNum2 = parseInt(this.num2);
     this.den2 = this.formFrac[0].den2.replace(/_/i, '');
-    this.newDen2 = parseInt(this.den2, 6);
+    this.newDen2 = parseInt(this.den2);
     this.mmcFraction(this.newDen, this.newDen2);
     this.index = 100;
     this.resultNum = ((this.mmc / this.newDen) * this.newNum) - ((this.mmc / this.newDen2) * this.newNum2);
@@ -142,9 +145,16 @@ export class SubtractionComponent implements OnInit {
     this.createChart();
   }
   clearFraction() {
-    location.reload();
+    this.formSubt = this.formBuilder.group({
+      num: ['', [Validators.required, Validators.nullValidator]],
+      den: ['', [Validators.required, Validators.nullValidator]],
+      num2: ['', [Validators.required, Validators.nullValidator]],
+      den2: ['', [Validators.required, Validators.nullValidator]]
+    });
   }
-
+  newOperation() {
+    this.router.navigate(['/operations']);
+  }
   createChart() {
     this.data = {
       labels: ['Denominador', 'Numerador'],

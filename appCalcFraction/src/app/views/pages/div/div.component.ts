@@ -97,9 +97,9 @@ export class DivComponent implements OnInit {
     this.den = this.formFrac[0].den.replace(/_/i, '');
     this.newDen = parseInt(this.den, 6);
     this.num2 = this.formFrac[0].num2.replace(/_/i, '');
-    this.newNum2 = parseInt(this.num2, 6);
+    this.newNum2 = parseInt(this.num2);
     this.den2 = this.formFrac[0].den2.replace(/_/i, '');
-    this.newDen2 = parseInt(this.den2, 6);
+    this.newDen2 = parseInt(this.den2);
     this.index = 100;
     this.resultNum = this.newNum * this.newDen2;
     this.resultDen = this.newDen * this.newNum2;
@@ -141,7 +141,15 @@ export class DivComponent implements OnInit {
   }
 
   clearFraction() {
-    location.reload();
+    this.formDiv = this.formBuilder.group({
+      num: ['', [Validators.required, Validators.nullValidator]],
+      den: ['', [Validators.required, Validators.nullValidator]],
+      num2: ['', [Validators.required, Validators.nullValidator]],
+      den2: ['', [Validators.required, Validators.nullValidator]]
+    });
+  }
+  newOperation() {
+    this.router.navigate(['/operations']);
   }
 
   createChart() {

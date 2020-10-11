@@ -93,7 +93,7 @@ export class MultComponent implements OnInit {
     this.num2 = this.formFrac[0].num2.replace(/_/i, '');
     this.newNum2 = parseInt(this.num2, 6);
     this.den2 = this.formFrac[0].den2.replace(/_/i, '');
-    this.newDen2 = parseInt(this.den2, 6);
+    this.newDen2 = parseInt(this.den2);
     this.index = 100;
     this.resultNum = this.newNum * this.newNum2;
     this.resultDen = this.newDen * this.newDen2;
@@ -124,7 +124,15 @@ export class MultComponent implements OnInit {
   }
 
   clearFraction() {
-    location.reload();
+    this.formMult = this.formBuilder.group({
+      num: ['', [Validators.required, Validators.nullValidator]],
+      den: ['', [Validators.required, Validators.nullValidator]],
+      num2: ['', [Validators.required, Validators.nullValidator]],
+      den2: ['', [Validators.required, Validators.nullValidator]]
+    });
+  }
+  newOperation() {
+    this.router.navigate(['/operations']);
   }
 
   createChart() {
