@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TextMaskModule } from 'angular2-text-mask';
 
 // Imports PrimeNG
 import { AccordionModule } from 'primeng/accordion';
@@ -25,6 +26,10 @@ import { TheoryComponent } from './views/pages/theory/theory.component';
 import { LoadComponent } from './views/components/load/load.component';
 import { OperationsComponent } from './views/pages/operations/operations.component';
 import { DevelopmentComponent } from './views/pages/development/development.component';
+import { MultComponent } from './views/pages/mult/mult.component';
+import { DivComponent } from './views/pages/div/div.component';
+import { PlusComponent } from './views/pages/plus/plus.component';
+import { SubtractionComponent } from './views/pages/subtraction/subtraction.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,11 @@ import { DevelopmentComponent } from './views/pages/development/development.comp
     TheoryComponent,
     LoadComponent,
     OperationsComponent,
-    DevelopmentComponent
+    DevelopmentComponent,
+    MultComponent,
+    DivComponent,
+    PlusComponent,
+    SubtractionComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +58,8 @@ import { DevelopmentComponent } from './views/pages/development/development.comp
     BrowserAnimationsModule,
     ChartModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextMaskModule
   ],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],

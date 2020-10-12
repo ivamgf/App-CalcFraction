@@ -13,7 +13,10 @@ import { FractionComponent } from './views/pages/fraction/fraction.component';
 import { TheoryComponent } from './views/pages/theory/theory.component';
 import { OperationsComponent } from './views/pages/operations/operations.component';
 import { DevelopmentComponent } from './views/pages/development/development.component';
-
+import { MultComponent } from './views/pages/mult/mult.component';
+import { DivComponent } from './views/pages/div/div.component';
+import { PlusComponent } from './views/pages/plus/plus.component';
+import { SubtractionComponent } from './views/pages/subtraction/subtraction.component';
 
 const routes: Routes = [
   {
@@ -48,6 +51,22 @@ const routes: Routes = [
   {
     path: 'fraction',
     component: FractionComponent
+  },
+  {
+    path: 'mult',
+    component: MultComponent
+  },
+  {
+    path: 'div',
+    component: DivComponent
+  },
+  {
+    path: 'plus',
+    component: PlusComponent
+  },
+  {
+    path: 'subt',
+    component: SubtractionComponent
   },
   {
     path: 'development',
