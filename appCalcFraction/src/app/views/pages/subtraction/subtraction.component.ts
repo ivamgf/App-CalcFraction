@@ -159,7 +159,7 @@ export class SubtractionComponent implements OnChanges, OnInit {
   }
   createChart() {
     this.data = {
-      labels: ['Denominador', 'Numerador'],
+      labels: ['', ''],
       datasets: [
           {
               data: [this.total, this.equation1],

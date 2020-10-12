@@ -35,8 +35,6 @@ export class DivComponent implements OnInit {
   public resultDen: number;
   public graphNum: number;
   public graphDen: number;
-  public title1: any;
-  public title2: any;
   public rest: number;
   public mdcNum1: number;
   public mdcNum2: number;
@@ -108,13 +106,9 @@ export class DivComponent implements OnInit {
     if (this.resultNum > this.resultDen) {
       this.graphNum = this.equation1;
       this.graphDen = this.total;
-      this.title1 = 'Numerador';
-      this.title2 = 'Denominador';
     } else {
       this.graphNum = Math.trunc(this.total);
       this.graphDen = Math.trunc(this.equation1);
-      this.title1 = 'Denominador';
-      this.title2 = 'Numerador';
     }
     this.mdcFraction(this.resultNum, this.resultDen);
     this.numFinal = this.resultNum / this.mdc;
@@ -155,7 +149,7 @@ export class DivComponent implements OnInit {
 
   createChart() {
     this.data = {
-      labels: [this.title1, this.title2],
+      labels: ['', ''],
       datasets: [
           {
               data: [this.graphNum, this.graphDen],
