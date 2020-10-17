@@ -19,4 +19,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/operations']);
   }
 
+  remember() {
+    this.router.navigate(['/arithmetic']);
+  }
+
 }

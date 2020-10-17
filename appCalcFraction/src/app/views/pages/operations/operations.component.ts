@@ -30,4 +30,7 @@ export class OperationsComponent implements OnInit {
   divide() {
     this.router.navigate(['/div']);
   }
+  remember() {
+    this.router.navigate(['/arithmetic']);
+  }
 }

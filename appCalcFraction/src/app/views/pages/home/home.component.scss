@@ -37,6 +37,27 @@ section {
   margin-left: 5%;
   padding-top: 40%;
 }
+.style-btn {
+  text-align: center;
+  float: right;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.style-info {
+  text-align: center;
+  float: left;
+  margin-top: 8%;
+  margin-bottom: 0%;
+}
+.style-info-nav {
+  text-align: center;
+  float: left;
+  margin-bottom: 5%;
+  position: relative;
+}
+.style-navbar {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 @media only screen and (min-width: 1200px){
   .style-card {
     width: 60%;

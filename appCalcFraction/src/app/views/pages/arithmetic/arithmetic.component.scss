@@ -1,0 +1,124 @@
+section {
+    background-color: white;
+    // height: 550px;    
+  }
+  .style-home {
+        width: 30%;
+  }
+  .style-logo {
+    width: 90%;
+    margin-top: 25%; 
+  }
+  .style-subtitle {
+    margin-top: 15%;
+    text-align: center;
+    color: rgba(255, 68, 0, 0.767);
+    font-weight: bold;
+    font-size: large;
+  }
+  .style-icon {
+    color: rgba(0, 102, 255, 0.671);
+  }
+  .style-card {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 15%;
+    border: 0px;
+  }
+  .style-text {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+  }
+  .style-img {
+    width: 80%;
+  }
+  .style-log {
+    margin-left: 5%;
+    padding-top: 40%;
+  }
+  @media only screen and (min-width: 1200px){
+    .style-card {
+      width: 60%;
+      margin-left: 20%;
+      margin-top: 15%;
+      border: 0px;
+    }
+    .style-icon {
+      color: rgba(0, 102, 255, 0.671);
+      margin-left: 20%;
+    }
+    .style-img {
+      width: 80%;
+      padding-right: 35%;
+    }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px){
+    .style-home {
+      width: 25%;
+    }
+    .style-logo {
+        width: 90%;
+        margin-top: 25%; 
+    }
+    .style-card {
+      width: 70%;
+      margin-left: 15%;
+      margin-top: 15%;
+      border: 0px;
+    }
+    .style-icon {
+      color: rgba(0, 102, 255, 0.671);
+      margin-left: 5%;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px){
+    .style-home {
+      width: 25%;
+    }
+    .style-logo {
+        width: 90%;
+        margin-top: 25%; 
+    }
+    .style-card {
+      width: 70%;
+      margin-left: 15%;
+      margin-top: 15%;
+      border: 0px;
+    }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 768px){
+    .style-home {
+      width: 35%;
+    }
+    .style-logo {
+        width: 90%;
+        margin-top: 25%; 
+    }
+    .style-card {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 15%;
+      border: 0px;
+    }
+    .style-icon {
+      color: rgba(0, 102, 255, 0.671);
+      margin-left: 0%;
+    }
+  }
+  @media only screen and (max-width: 557px){
+      .style-home {
+          width: 50%;
+          }
+      .style-logo {
+          width: 90%;
+          margin-right: 15%;
+          margin-top: 25%; 
+      }
+      .style-card {
+        width: 95%;
+        margin-left: 5%;
+        margin-top: 15%;
+        border: 0px;
+      }
+  }

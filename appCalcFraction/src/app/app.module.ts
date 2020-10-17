@@ -30,6 +30,7 @@ import { MultComponent } from './views/pages/mult/mult.component';
 import { DivComponent } from './views/pages/div/div.component';
 import { PlusComponent } from './views/pages/plus/plus.component';
 import { SubtractionComponent } from './views/pages/subtraction/subtraction.component';
+import { ArithmeticComponent } from './views/pages/arithmetic/arithmetic.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { SubtractionComponent } from './views/pages/subtraction/subtraction.comp
     MultComponent,
     DivComponent,
     PlusComponent,
-    SubtractionComponent
+    SubtractionComponent,
+    ArithmeticComponent
   ],
   imports: [
     BrowserModule,

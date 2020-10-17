@@ -17,6 +17,7 @@ import { MultComponent } from './views/pages/mult/mult.component';
 import { DivComponent } from './views/pages/div/div.component';
 import { PlusComponent } from './views/pages/plus/plus.component';
 import { SubtractionComponent } from './views/pages/subtraction/subtraction.component';
+import { ArithmeticComponent } from './views/pages/arithmetic/arithmetic.component';
 
 const routes: Routes = [
   {
@@ -75,6 +76,10 @@ const routes: Routes = [
   {
       path: 'theory',
       component: TheoryComponent
+  },
+  {
+    path: 'arithmetic',
+    component: ArithmeticComponent
   },
   {
       path: 'page404',

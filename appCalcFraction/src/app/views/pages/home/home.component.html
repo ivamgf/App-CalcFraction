@@ -1,12 +1,23 @@
 <section>
-    <div class="container style-home">      
-      <h4 class="card-title style-text style-log">Iniciar uma Operação</h4>            
-      <span class="style-icon">
-        <button class="btn btn-link" (click)="calc()">
-          <img class="style-img" src="/assets/images/maths3.png" alt="Iniciar Operacao">
-          <!-- <i class="fas fa-chart-pie fa-5x"></i> -->
-        </button>                
-      </span>         
+  <nav class="navbar navbar-expand-sm bg-light navbar-light style-navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <p class="text-primary style-info">
+          Para facilitar as operações com frações, desenvolvemos o CalcFraction. 
+        </p>
+      </li>          
+    </ul>
+  </nav>
+  <div class="container style-home">      
+    
+    <h4 class="card-title style-text style-log">Para iniciar o cálculo clique na imagem abaixo.</h4>            
+    <span class="style-icon">
+      <button class="btn btn-link" (click)="calc()">
+        <img class="style-img" src="/assets/images/maths3.png" alt="Iniciar Operacao">
+        <!-- <i class="fas fa-chart-pie fa-5x"></i> -->
+      </button>                
+    </span><br>
+    <button type="button" class="btn btn-link style-btn" (click)="remember()">Vamos Relembrar?</button><br><br>       
 
-    </div>
+  </div>
 </section>
